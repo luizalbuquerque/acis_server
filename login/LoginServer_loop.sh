@@ -13,9 +13,13 @@ else
     echo "Diretório ./log/ já existe."
 fi
 
+# Número máximo de tentativas antes de abortar
+MAX_RETRIES=3
+RETRY_COUNT=0
+
 # Início do loop para monitorar e reiniciar o LoginServer
 err=1
-until [ $err == 0 ]; do
+until [ $err == 0 ] || [ $RETRY_COUNT -ge $MAX_RETRIES ]; do
 
     echo "=============================="
     echo "Verificando e movendo logs antigos"
@@ -37,13 +41,22 @@ until [ $err == 0 ]; do
     # Captura o código de saída do comando anterior
     err=$?
 
-    # Mensagem para reiniciar se houver falha
+    # Verifica se houve falha
     if [ $err -ne 0 ]; then
         echo "Erro ao executar LoginServer. Código de saída: $err"
+        RETRY_COUNT=$((RETRY_COUNT + 1))
+        echo "Tentativa $RETRY_COUNT de $MAX_RETRIES"
+        echo "=============================="
+        echo "Aguardando antes de reiniciar"
+        echo "=============================="
+        sleep 10
     fi
-
-    echo "=============================="
-    echo "Aguardando antes de reiniciar"
-    echo "=============================="
-    sleep 10
 done
+
+# Verifica se atingiu o número máximo de tentativas
+if [ $RETRY_COUNT -ge $MAX_RETRIES ]; then
+    echo "Falha após $MAX_RETRIES tentativas. Abortando."
+    exit 1
+fi
+
+echo "LoginServer iniciado com sucesso!"

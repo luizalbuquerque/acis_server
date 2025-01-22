@@ -1,6 +1,19 @@
 #!/bin/bash
 set -x
 
+echo "=============================="
+echo "Garantindo permissões de execução"
+echo "=============================="
+
+# Dá permissão de execução para todos os scripts .sh no diretório atual e subdiretórios
+find . -type f -name "*.sh" -exec chmod +x {} \;
+
+# Dá permissão de leitura e execução para todos os arquivos na pasta libs
+chmod +r ./libs/*.jar
+
+echo "Permissões ajustadas com sucesso."
+
+
 echo =================================
 echo Pré Setup: Validando se o container está ativo
 echo =================================

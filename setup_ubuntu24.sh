@@ -46,7 +46,7 @@ fi
 echo =============================
 echo Passo 3: Criando banco de dados se não existir
 echo =============================
-mysql -u root -p -P 3333 -e "CREATE DATABASE IF NOT EXISTS acis;"
+mysql -u root -proot -P 3333 -e "CREATE DATABASE IF NOT EXISTS acis;"
 if [ $? -ne 0 ]; then
     echo "Passo 3: Falhou"
     exit 1
@@ -57,7 +57,7 @@ fi
 echo =============================
 echo Passo 4: Validando se o banco foi criado
 echo =============================
-mysql -u root -p -P 3333 -e "SHOW DATABASES;"
+mysql -u root -proot -P 3333 -e "SHOW DATABASES;"
 if [ $? -ne 0 ]; then
     echo "Passo 4: Falhou"
     exit 1
@@ -68,7 +68,7 @@ fi
 echo =============================
 echo Passo 5: Executando scripts SQL no container
 echo =============================
-docker exec acis_database bash -c 'for file in /tmp/sql/*.sql; do if [ -f "$file" ]; then echo "Importando $file..."; mysql -u root -p acis < "$file"; else echo "Nenhum arquivo encontrado em /tmp/sql/*.sql"; fi; done'
+docker exec acis_database bash -c 'for file in /tmp/sql/*.sql; do if [ -f "$file" ]; then echo "Importando $file..."; mysql -u root -proot acis < "$file"; else echo "Nenhum arquivo encontrado em /tmp/sql/*.sql"; fi; done'
 if [ $? -ne 0 ]; then
     echo "Passo 5: Falhou"
     exit 1
@@ -79,7 +79,7 @@ fi
 echo =============================
 echo Passo 6: Validando tabelas criadas no banco
 echo =============================
-mysql -u root -p -P 3333 -e "USE acis; SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = 'acis';"
+mysql -u root -proot -P 3333 -e "USE acis; SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = 'acis';"
 if [ $? -ne 0 ]; then
     echo "Passo 6: Falhou"
     exit 1

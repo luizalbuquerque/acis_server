@@ -1,0 +1,24 @@
+[20-01-2025 10:54:20]	INFO	Loading gameserver configuration files.
+[20-01-2025 10:54:20]	WARNING	The following property key 'CustomSpawn' is missing. It will use default value 'false'.
+[20-01-2025 10:54:20]	WARNING	The following property key 'RandomAreasSpawn' is missing. It will use default value '1'.
+[20-01-2025 10:54:20]	WARNING	The following property key 'custom_spawn1' is missing. It will use default value '[I@3581c5f3'.
+[20-01-2025 10:54:20]	WARNING	The following property key 'custom_spawn2' is missing. It will use default value '[I@6aa8ceb6'.
+[20-01-2025 10:54:20]	WARNING	The following property key 'custom_spawn3' is missing. It will use default value '[I@2530c12'.
+[20-01-2025 10:54:21]	INFO	Initializing ThreadPool.
+[20-01-2025 10:54:21]	INFO	----------------------------------------------------------------=[ IdFactory ]
+[20-01-2025 10:54:21]	WARNING	Couldn't set characters offline.
+[20-01-2025 10:54:21]	INFO	Updated characters online status.
+[20-01-2025 10:54:21]	WARNING	Couldn't cleanup database.
+[20-01-2025 10:54:21]	INFO	Cleaned 0 elements from database.
+[20-01-2025 10:54:21]	WARNING	Couldn't cleanup timestamps.
+[20-01-2025 10:54:21]	INFO	Cleaned 0 expired timestamps from database.
+[20-01-2025 10:54:21]	SEVERE	Couldn't properly initialize objectIds.
+[20-01-2025 10:54:21]	INFO	Initializing 102912 objectIds pool, with 0 used ids.
+[20-01-2025 10:54:21]	INFO	--------------------------------------------------------------------=[ World ]
+[20-01-2025 10:54:21]	INFO	World grid (176 by 256) is now set up.
+[20-01-2025 10:54:21]	INFO	Loaded regions.
+[20-01-2025 10:54:21]	INFO	Loaded 1 announcements.
+[20-01-2025 10:54:21]	SEVERE	Couldn't restore server variables.
+[20-01-2025 10:54:21]	INFO	Loaded 10 images of AntiBot
+[20-01-2025 10:54:21]	INFO	-------------------------------------------------------------------=[ Skills ]
+[20-01-2025 10:54:22]	INFO	SkillTable: Loaded 29749 skills.

@@ -1,0 +1,30 @@
+# Etapa base para o ambiente Java
+FROM eclipse-temurin:21-jre-alpine
+
+# Instalar o MySQL, cliente MySQL, bash e dos2unix
+RUN apk add --no-cache mysql mysql-client bash dos2unix
+
+# Criar diretórios necessários
+RUN mkdir -p /var/lib/mysql /var/run/mysqld /app
+
+# Definir o diretório de trabalho
+WORKDIR /app
+
+# Copiar os arquivos do projeto para o contêiner
+COPY . /app
+
+# Garantir permissões de leitura, escrita e execução em todos os arquivos
+RUN chmod -R 777 /app
+
+# Tornar os scripts necessários executáveis e garantir formato Unix
+RUN for file in /app/login/startLoginServer.sh /app/login/LoginServer_loop.sh \
+                 /app/gameserver/startGameServer.sh /app/gameserver/GameServer_loop.sh /app/startAll.sh; \
+    do \
+      [ -f "$file" ] && dos2unix "$file" && chmod +x "$file"; \
+    done
+
+# Expor as portas necessárias
+EXPOSE 2106 7777 3306 3310
+
+# Comando padrão para inicializar os serviços
+CMD ["/app/startAll.sh"]

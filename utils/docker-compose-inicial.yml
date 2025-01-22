@@ -1,0 +1,64 @@
+version: '3.9'
+
+services:
+  l2server:
+    container_name: server_acis384
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "2106:2106"
+      - "7777:7777"
+    volumes:
+      - ./libs:/app/libs
+      - ./config:/app/config
+      - ./loginserver:/app/loginserver
+      - ./gameserver:/app/gameserver
+      - ./gameserver/data:/app/gameserver/data
+      - ./gameserver/log:/app/gameserver/log
+      - ./sql:/app/sql
+      - ./tools:/app/tools
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_USER: root
+      DB_PASS: 123@123
+      DB_NAME: aCis
+    networks:
+      - l2network
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:7777 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  mysql:
+    image: mysql:5.5
+    container_name: acis384_database
+    environment:
+      MYSQL_ROOT_PASSWORD: 123@123
+      MYSQL_DATABASE: aCis
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 123@123
+    ports:
+      - "3310:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./sql:/docker-entrypoint-initdb.d
+    networks:
+      - l2network
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -p123@123 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  mysql_data:
+
+networks:
+  l2network:
+    driver: bridge

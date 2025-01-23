@@ -24,33 +24,45 @@ while [ $tentativa -lt $max_tentativas ]; do
     java -version
 
     # Inicia o GameServer com o classpath configurado
-    java -Xmx2G -cp "$CLASSPATH" net.sf.l2j.gameserver.GameServer 2>&1 | tee -a log/stdout.log
+    java -Xmx2G -cp "$CLASSPATH" net.sf.l2j.gameserver.GameServer 2>&1 | tee log/stdout.log
     exit_code=$?
 
     if [ $exit_code -eq 2 ]; then
+        echo
         echo "Admin solicitou reinício. Tentando novamente..."
+        echo
         continue
     elif [ $exit_code -eq 1 ]; then
+        echo
         echo "Erro fatal: O servidor foi encerrado de forma anormal."
+        echo
         break
     else
+        echo
         echo "Servidor encerrado normalmente."
+        echo
         break
     fi
 done
 
 if [ $tentativa -ge $max_tentativas ]; then
+    echo
     echo "Número máximo de tentativas ($max_tentativas) atingido. Encerrando."
+    echo
 fi
 
 echo "============================================================="
 echo "                 MONITORAMENTO DE PROCESSOS                  "
 echo "============================================================="
+echo ""
 echo "USE F3 APÓS O COMANDO HTOP PARA VER PROCESSOS ATIVOS NO HTOP"
+echo ""
 echo "Significados dos estados dos processos:"
+echo ""
 echo "R: Running (Executando) – O processo está atualmente em execução."
 echo "S: Sleeping (Ocioso) – O processo está ativo, mas aguardando algo (ex.: conexão, E/S)."
 echo "D: Uninterruptible sleep (Ocioso não-interruptível) – O processo está aguardando I/O (não pode ser interrompido)."
 echo "T: Stopped (Parado) – O processo foi parado (via kill -STOP ou depuração)."
 echo "Z: Zombie – O processo terminou, mas ainda tem uma entrada na tabela de processos."
+echo ""
 echo "============================================================="

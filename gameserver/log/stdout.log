@@ -1,0 +1,200 @@
+Loading gameserver configuration files.
+The following property key 'CustomSpawn' is missing. It will use default value 'false'.
+The following property key 'RandomAreasSpawn' is missing. It will use default value '1'.
+The following property key 'custom_spawn1' is missing. It will use default value '[I@b81eda8'.
+The following property key 'custom_spawn2' is missing. It will use default value '[I@68de145'.
+The following property key 'custom_spawn3' is missing. It will use default value '[I@27fa135a'.
+Initializing ThreadPool.
+----------------------------------------------------------------=[ IdFactory ]
+Updated characters online status.
+Cleaned 0 elements from database.
+Cleaned 0 expired timestamps from database.
+Initializing 102912 objectIds pool, with 14 used ids.
+--------------------------------------------------------------------=[ World ]
+World grid (176 by 256) is now set up.
+Loaded regions.
+Loaded 1 announcements.
+Loaded 1 server variables.
+Loaded 10 images of AntiBot
+-------------------------------------------------------------------=[ Skills ]
+SkillTable: Loaded 29749 skills.
+Loaded 117 fishing skills.
+Loaded 64 clan skills.
+Loaded 14550 enchant skills.
+--------------------------------------------------------------------=[ Items ]
+Loaded items.
+Loaded 30 enchant scroll data.
+Loaded 14 summon items.
+Loaded 180 hennas.
+Loaded 675 buyLists.
+Loaded 116 multisell.
+Loaded 871 recipes.
+Loaded 54 armor sets.
+Loaded 270 fish.
+Loaded 334 spellbooks.
+Loaded 39 Soul Crystals data and 124 NPCs data.
+Loaded 4 sets of augmentation stats.
+Loaded 170 blue, 1070 purple and 540 red Life-Stone skills.
+Loaded 2 cursed weapons.
+-------------------------------------------------------------------=[ Admins ]
+Loaded 10 access levels.
+Loaded 263 admin command rights.
+Loaded 0 bookmarks.
+---------------------------------------------------------------=[ Characters ]
+Loaded 89 player classes templates.
+Loaded 2 player infos.
+Loaded 81 player levels.
+Loaded 14 newbie buffs.
+Loaded 692 teleport locations.
+Loaded 0 RaidPoints entries.
+Loaded 6 PvP Colors templates.
+Loaded 1 PvP Rewards templates.
+Loaded 6 SpreeKills data.
+---------------------------------------------------------=[ Community server ]
+Community server is disabled.
+--------------------------------------------------------------------=[ Clans ]
+Loaded 2 crests.
+Loaded 0 clans.
+----------------------------------------------------=[ Geodata & Pathfinding ]
+Loaded 0 L2D region files.
+Loaded 32 node buffers.
+--------------------------------------------------------------------=[ Zones ]
+Loaded 27 zones classes and total 1019 zones.
+-----------------------------------------------------=[ Castles & Clan Halls ]
+Loaded 9 castles.
+Loaded 44 clan halls and 6 conquerable clan halls.
+------------------------------------------------------------=[ Task Managers ]
+Restored 0 items on ground.
+--------------------------------------------------------------=[ Auto Spawns ]
+Loaded 124 auto spawns.
+--------------------------------------------------------------=[ Seven Signs ]
+Currently on Seal Validation period.
+The Seal of Strife remains unclaimed.
+The Seal of Avarice remains unclaimed.
+The Seal of Gnosis remains unclaimed.
+The Seven Signs competition ended with a tie last week.
+Next Seven Signs period change set to Mon Jan 27 18:00:00 UTC 2025.
+Next Seven Signs period begins in 3 days, 23 hours and 59 mins.
+Seven Signs Festival initialization was bypassed due to Seal Validation being under effect.
+------------------------------------------------------------=[ Manor Manager ]
+Loaded 256 seeds.
+---------------------------------------------------------------------=[ NPCs ]
+Loaded 95 available buffs.
+Loaded 2 herbs groups.
+Loaded 6489 NPC templates.
+Loaded 12 Walker routes.
+Loaded 547 doors templates.
+Loaded 29 static objects.
+Loaded 2 polymorph templates.
+Loaded 40686 spawns.
+Loaded 195 raid bosses.
+Loaded 12 GrandBosses instances.
+Loaded day creatures spawns.
+Loaded Dimensional Rift rooms.
+AuctionTable: Loaded 1 items.
+Loaded 207 Boss info.
+Loaded 12 Donate Service data.
+-------------------------------------------------------=[ Olympiads & Heroes ]
+Loaded 12 stadiums.
+12599 minutes until Olympiad period ends.
+Next weekly Olympiad change is in 10068 minutes.
+Loaded 0 nobles.
+Olympiad competition period starts in 0 days, 0 hours and 0 mins.
+Olympiad event starts/started @ Thu Jan 23 18:00:00 UTC 2025.
+Loaded 0 heroes and 0 all time heroes.
+----------------------------------------------------------=[ Four Sepulchers ]
+Olympiad game started.
+Loaded 20 Mysterious-Box.
+Loaded 39 Key-Box.
+Loaded 716 physical type monsters.
+Loaded 716 magical type monsters.
+Loaded 4 Shadows of Halisha.
+Loaded 92 Duke's Hall Gatekeepers.
+Loaded 68 Emperor's Grave monsters.
+Loaded 4 managers.
+---------------------------------------------------------=[ Quests & Scripts ]
+Devastated Castle siege scheduled for Fri Jan 31 15:00:00 UTC 2025.
+Fortress of Resistance siege scheduled for Fri Jan 31 15:00:00 UTC 2025.
+Fortress of the Dead siege scheduled for Fri Jan 31 15:00:00 UTC 2025.
+Rainbow Springs Chateau siege scheduled for Fri Jan 31 15:00:00 UTC 2025.
+Loaded 405 regular scripts and 5 scheduled scripts.
+-------------------------------------------------------------------=[ Events ]
+Loaded 28 Derby Track records, currently on race #29.
+CharacterKilling: Started! Cycle: 6 - Next cycle in: 85734s
+------------------------------------------------------------=[ Newbie System ]
+Newbie System Desatived
+-------------------------------------------------------------=[ Hwid Manager ]
+- Loading Protection Configs
+- HWID Ban: Loaded 0 HWIDs
+- HWID Info: Loaded 0 HWIDs
+- HWID Manager read successfully...
+---------------------------------------------------------=[ Party Farm Event ]
+Evento Party Farm
+[Party Farm]: Proximo Evento: Fri Jan 24 00:01:00 UTC 2025
+[Party Farm Time]: Enabled
+---------------------------------------------------------=[ Tournament Event ]
+Tournament Event is enabled.
+[Tournament]: Proximo Evento: Thu Jan 23 20:00:00 UTC 2025
+--------------------------------------------------------------=[ Vote System ]
+Vote System: Loaded
+Loaded 251 fake player names.
+Loaded 33 fake player titles.
+------------------------------------------------------------=[ Phantom Store ]
+Phantom Store Desatived
+-----------------------------------------------------------=[ Phantom Walker ]
+Phantom Walker Desatived
+-------------------------------------------------------=[ DataBase Auto Save ]
+Database Backup Manager: Loaded
+[DataBase Auto Save]: Enabled
+-------------------------------------------------------------=[ Team Vs Team ]
+TeamVsTeam: is Enable
+----------------------------------------------------------=[ Christmas Event ]
+Could not parse file: ./config/aCis/SantaClaus.xml 
+java.io.FileNotFoundException: /opt/l2/servers/acis_server/gameserver/./config/aCis/SantaClaus.xml (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:84)
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:180)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:654)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:861)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)
+	at net.sf.l2j.commons.data.xml.IXmlReader.parseFile(IXmlReader.java:91)
+	at net.sf.l2j.commons.data.xml.IXmlReader.parseFile(IXmlReader.java:51)
+	at Dev.EventMoster.ChristmasEvent.load(ChristmasEvent.java:46)
+	at Dev.EventMoster.ChristmasEvent.<init>(ChristmasEvent.java:40)
+	at Dev.EventMoster.ChristmasEvent$SingletonHolder.<clinit>(ChristmasEvent.java:179)
+	at Dev.EventMoster.ChristmasEvent.getInstance(ChristmasEvent.java:174)
+	at net.sf.l2j.gameserver.GameServer.<init>(GameServer.java:410)
+	at net.sf.l2j.gameserver.GameServer.main(GameServer.java:149)
+Loaded 0 Rewards!
+-----------------------------------------------------------------=[ Handlers ]
+Loaded 260 admin command handlers.
+Loaded 13 chat handlers.
+Loaded 72 item handlers.
+Loaded 73 skill handlers.
+Loaded 23 user command handlers.
+-------------------------------------------------------------------=[ System ]
+Deadlock detector is disabled.
+-----------------------------------------------------------------=[ GameInfo ]
+Gameserver used memory: 305 / 2048 Mo.
+Players Online: 0
+--------------------------------------------------------------------=[ Login ]
+Connecting to login on 191.101.18.194:9014.
+No connection found with loginserver, next try in 10 seconds.
+Connecting to login on 191.101.18.194:9014.
+Registered as server: [1] Bartz.
+A new Four Sepulchers event has been announced (ATTACK).
+A new Four Sepulchers event has been announced (END).
+A new Four Sepulchers event has been announced (ENTRY).
+A new Four Sepulchers event has been announced (ATTACK).
+Error at BackuprestoreCannot run program "cmd": error=2, No such file or directory
+-----------------------------------------------------------------=[ GameInfo ]
+Gameserver used memory: 415 / 2048 Mo.
+Players Online: 0

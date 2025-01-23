@@ -103,3 +103,29 @@ fi
 echo =============================
 echo Finalizado com sucesso!
 echo =============================
+
+
+
+echo ===============================
+echo Permissionando próximo arquivo
+echo ===============================
+
+# Garantir permissão e formato correto para o script login/LoginLoop.sh
+if [ -f "./login/LoginLoop.sh" ]; then
+    echo "Preparando login/LoginLoop.sh..."
+    dos2unix ./login/LoginLoop.sh 2>/dev/null
+    chmod +x ./login/LoginLoop.sh
+
+    # Verificar se o script está executável
+    if [ -x "./login/LoginLoop.sh" ]; then
+        echo "Executando login/LoginLoop.sh..."
+        ./login/LoginLoop.sh
+    else
+        echo "Erro: Não foi possível conceder permissão de execução ao login/LoginLoop.sh."
+        exit 1
+    fi
+else
+    echo "Erro: O arquivo login/LoginLoop.sh não foi encontrado!"
+    exit 1
+fi
+

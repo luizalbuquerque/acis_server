@@ -8,6 +8,13 @@ echo "=============================="
 max_tentativas=3
 tentativa=0
 
+# Diretório base para garantir que os caminhos relativos funcionem
+BASE_DIR="$(dirname "$(readlink -f "$0")")"
+cd "$BASE_DIR" || exit 1
+
+# Configurar o CLASSPATH
+CLASSPATH="./libs/*"
+
 # Loop para reiniciar até 3 vezes
 while [ $tentativa -lt $max_tentativas ]; do
     ((tentativa++))
@@ -17,7 +24,7 @@ while [ $tentativa -lt $max_tentativas ]; do
     java -version
 
     # Inicia o LoginServer com o classpath configurado
-    java -Xmx32m -cp "./libs/*" net.sf.l2j.loginserver.LoginServer
+    java -Xmx32m -cp "$CLASSPATH" net.sf.l2j.loginserver.LoginServer
     exit_code=$?
 
     if [ $exit_code -eq 2 ]; then
@@ -43,3 +50,4 @@ if [ $tentativa -ge $max_tentativas ]; then
     echo "Número máximo de tentativas ($max_tentativas) atingido. Encerrando."
     echo
 fi
+

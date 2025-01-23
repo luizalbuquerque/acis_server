@@ -1,14 +1,14 @@
-[21-01-2025 18:26:19]	INFO	Loading loginserver configuration files.
-[21-01-2025 18:26:19]	INFO	----------------------------------------------------------=[ LoginController ]
-[21-01-2025 18:26:19]	INFO	Cached 10 KeyPairs for RSA communication.
-[21-01-2025 18:26:20]	INFO	Stored 20 keys for Blowfish communication.
-[21-01-2025 18:26:20]	INFO	--------------------------------------------------------=[ GameServerManager ]
-[21-01-2025 18:26:20]	INFO	Loaded 127 server names.
-[21-01-2025 18:26:20]	INFO	Loaded 1 registered gameserver(s).
-[21-01-2025 18:26:20]	INFO	Cached 10 RSA keys for gameserver communication.
-[21-01-2025 18:26:20]	INFO	-----------------------------------------------------------------=[ Ban List ]
-[21-01-2025 18:26:20]	INFO	Loaded 0 banned IP(s).
-[21-01-2025 18:26:20]	INFO	-------------------------------------------------=[ IP, Ports & Socket infos ]
-[21-01-2025 18:26:20]	INFO	Listening for gameservers on *:9014.
-[21-01-2025 18:26:20]	INFO	Loginserver ready on *:2106.
-[21-01-2025 18:26:20]	INFO	--------------------------------------------=[ Waiting for gameserver answer ]
+[22-01-2025 09:57:42]	INFO	Loading loginserver configuration files.
+[22-01-2025 09:57:42]	INFO	----------------------------------------------------------=[ LoginController ]
+[22-01-2025 09:57:43]	INFO	Cached 10 KeyPairs for RSA communication.
+[22-01-2025 09:57:43]	INFO	Stored 20 keys for Blowfish communication.
+[22-01-2025 09:57:43]	INFO	--------------------------------------------------------=[ GameServerManager ]
+[22-01-2025 09:57:43]	INFO	Loaded 127 server names.
+[22-01-2025 09:57:43]	INFO	Loaded 1 registered gameserver(s).
+[22-01-2025 09:57:43]	INFO	Cached 10 RSA keys for gameserver communication.
+[22-01-2025 09:57:43]	INFO	-----------------------------------------------------------------=[ Ban List ]
+[22-01-2025 09:57:43]	INFO	Loaded 0 banned IP(s).
+[22-01-2025 09:57:43]	INFO	-------------------------------------------------=[ IP, Ports & Socket infos ]
+[22-01-2025 09:57:43]	INFO	Listening for gameservers on *:9014.
+[22-01-2025 09:57:43]	INFO	Loginserver ready on *:2106.
+[22-01-2025 09:57:43]	INFO	--------------------------------------------=[ Waiting for gameserver answer ]

@@ -100,14 +100,14 @@ else
     echo "Passo 6: Sucesso"
 fi
 
-echo =============================
-echo Finalizado com sucesso!
-echo =============================
+echo ==================================
+echo SETUP data finalizado com sucesso!
+echo ==================================
 
-
+echo xxxxxxxxxxxxx
 
 echo ===============================
-echo Permissionando próximo arquivo
+echo Permissionando LoginLoop.sh...
 echo ===============================
 
 # Garantir permissão e formato correto para o script login/LoginLoop.sh

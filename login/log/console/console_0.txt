@@ -1,12 +1,14 @@
-[23-01-2025 10:40:24]	INFO	Loading loginserver configuration files.
-[23-01-2025 10:40:24]	INFO	----------------------------------------------------------=[ LoginController ]
-[23-01-2025 10:40:25]	INFO	Cached 10 KeyPairs for RSA communication.
-[23-01-2025 10:40:25]	INFO	Stored 20 keys for Blowfish communication.
-[23-01-2025 10:40:25]	INFO	--------------------------------------------------------=[ GameServerManager ]
-[23-01-2025 10:40:25]	INFO	Loaded 127 server names.
-[23-01-2025 10:40:25]	INFO	Loaded 1 registered gameserver(s).
-[23-01-2025 10:40:25]	INFO	Cached 10 RSA keys for gameserver communication.
-[23-01-2025 10:40:25]	INFO	-----------------------------------------------------------------=[ Ban List ]
-[23-01-2025 10:40:25]	INFO	Loaded 0 banned IP(s).
-[23-01-2025 10:40:25]	INFO	-------------------------------------------------=[ IP, Ports & Socket infos ]
-[23-01-2025 10:40:25]	SEVERE	Failed to start the gameserver listener.
+[23-01-2025 10:56:24]	INFO	Loading loginserver configuration files.
+[23-01-2025 10:56:24]	INFO	----------------------------------------------------------=[ LoginController ]
+[23-01-2025 10:56:24]	INFO	Cached 10 KeyPairs for RSA communication.
+[23-01-2025 10:56:24]	INFO	Stored 20 keys for Blowfish communication.
+[23-01-2025 10:56:24]	INFO	--------------------------------------------------------=[ GameServerManager ]
+[23-01-2025 10:56:24]	INFO	Loaded 127 server names.
+[23-01-2025 10:56:24]	INFO	Loaded 1 registered gameserver(s).
+[23-01-2025 10:56:24]	INFO	Cached 10 RSA keys for gameserver communication.
+[23-01-2025 10:56:24]	INFO	-----------------------------------------------------------------=[ Ban List ]
+[23-01-2025 10:56:24]	INFO	Loaded 0 banned IP(s).
+[23-01-2025 10:56:24]	INFO	-------------------------------------------------=[ IP, Ports & Socket infos ]
+[23-01-2025 10:56:24]	INFO	Listening for gameservers on *:9014.
+[23-01-2025 10:56:24]	INFO	Loginserver ready on *:2106.
+[23-01-2025 10:56:24]	INFO	--------------------------------------------=[ Waiting for gameserver answer ]

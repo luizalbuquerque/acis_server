@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href=""?>
 <list>
 	<Settings enable="true" mobMinLvL="10" mobMaxLvL="78" despawnSeconds="15" NpcTempates="50010,50011" spawnChance="10"/>
 	

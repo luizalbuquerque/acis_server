@@ -8,5 +8,5 @@
 @param Integer limit - limit of announces (used only if auto=true, 0 = unlimited) 
 --> 
 <list> 
-<announcement message="teste" critical="true" auto="false" initial_delay="0" delay="0" limit="0" /> 
+<announcement message="Bem vindo ao L2 CATARINA - visite l2catarina.com" critical="true" auto="false" initial_delay="0" delay="0" limit="0" /> 
 </list>

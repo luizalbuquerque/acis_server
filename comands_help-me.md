@@ -130,3 +130,8 @@ rm -rf /opt/*
   ```bash
   Start-Service -Name MySQL
   ```
+
+  
+  NAvegar pelo acis database
+  mysql -u root -proot -h 127.0.0.1 -P 3333
+  

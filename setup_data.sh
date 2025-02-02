@@ -1,19 +1,26 @@
 #!/bin/bash
+
+
 set -x
+
 
 echo "================================="
 echo "Garantindo permissões de execução"
 echo "================================="
 
+
 # Dá permissão de execução para todos os scripts .sh no diretório atual e subdiretórios
 find . -type f -name "*.sh" -exec chmod +x {} \;
+
 
 # Dá permissão de leitura e execução para todos os arquivos na pasta libs
 chmod +r ./libs/*.jar
 
-echo
+echo ""
 echo "Permissões ajustadas com sucesso."
-echo
+echo ""
+
+
 
 echo "=================================="
 echo "Pré Setup: Validando se o container está ativo"
@@ -32,11 +39,13 @@ else
     echo "Container acis_database já está ativo"
 fi
 
-echo
+echo ""
 echo "Aguardando o MySQL inicializar..."
 sleep 10
 echo
 
+
+echo ""
 echo "================================="
 echo "Passo 1: Copiando scripts SQL"
 echo "================================="
@@ -48,7 +57,7 @@ else
     echo "Passo 1: Sucesso"
 fi
 
-echo
+echo ""
 echo "================================="
 echo "Passo 2: Verificando arquivos copiados"
 echo "================================="
@@ -60,7 +69,9 @@ else
     echo "Passo 2: Sucesso"
 fi
 
-echo
+
+
+echo ""
 echo "================================="
 echo "Passo 3: Criando banco de dados se não existir"
 echo "================================="
@@ -72,7 +83,9 @@ else
     echo "Passo 3: Sucesso"
 fi
 
-echo
+
+
+echo ""
 echo "================================="
 echo "Passo 4: Validando se o banco foi criado"
 echo "================================="
@@ -84,7 +97,9 @@ else
     echo "Passo 4: Sucesso"
 fi
 
-echo
+
+
+echo ""
 echo "================================="
 echo "Passo 5: Executando scripts SQL no container"
 echo "================================="
@@ -96,7 +111,9 @@ else
     echo "Passo 5: Sucesso"
 fi
 
-echo
+
+
+echo ""
 echo "================================="
 echo "Passo 6: Validando tabelas criadas no banco"
 echo "================================="
@@ -108,7 +125,9 @@ else
     echo "Passo 6: Sucesso"
 fi
 
-echo
+
+
+echo ""
 echo "================================="
 echo "Permissionando LoginLoop.sh..."
 echo "================================="

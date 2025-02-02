@@ -79,30 +79,26 @@ else
 fi
 
 echo =============================
-echo "Passo 5: Executando scripts SQL no container"
+echo Passo 5: Executando scripts SQL no container
 echo =============================
-status=0
-docker exec acis_database bash -c 'for file in /tmp/sql/*.sql; do 
-  if [ -f "$file" ]; then 
-    echo "Importando $file..."
-    mysql -u root -proot acis < "$file"
-    if [ $? -ne 0 ]; then
-      echo "Erro ao importar $file"
-      exit 1
-    fi
-  else 
-    echo "Nenhum arquivo encontrado em /tmp/sql/*.sql"
+docker exec acis_database bash -c 'for file in /tmp/sql/*.sql; do if [ -f "$file" ]; then echo "Importando $file..."; mysql -u root -proot acis < "$file"; else echo "Nenhum arquivo encontrado em /tmp/sql/*.sql"; fi; done'
+if [ $? -ne 0 ]; then
+    echo "Passo 5: Falhou"
     exit 1
-  fi
-done' || status=$?
-
-if [ $status -ne 0 ]; then
-  echo "Passo 5: Falhou"
-  exit 1
 else
-  echo "Passo 5: Sucesso"
+    echo "Passo 5: Sucesso"
 fi
 
+echo =============================
+echo Passo 6: Validando tabelas criadas no banco
+echo =============================
+mysql -u root -proot -P 3333 -e "USE acis; SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = 'acis';"
+if [ $? -ne 0 ]; then
+    echo "Passo 6: Falhou"
+    exit 1
+else
+    echo "Passo 6: Sucesso"
+fi
 
 echo ===============================
 echo Permissionando LoginLoop.sh...

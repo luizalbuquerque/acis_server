@@ -24,7 +24,7 @@ while [ $tentativa -lt $max_tentativas ]; do
     java -version
 
     # Inicia o GameServer com o classpath configurado
-  nohup   java -Xmx2G -cp "$CLASSPATH" net.sf.l2j.gameserver.GameServer 2>&1 | tee log/stdout.log
+    java -Xmx2G -cp "$CLASSPATH" net.sf.l2j.gameserver.GameServer 2>&1 | tee log/stdout.log
     exit_code=$?
 
     if [ $exit_code -eq 2 ]; then

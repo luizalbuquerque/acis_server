@@ -9,7 +9,7 @@ while true; do
     java -version
 
     # Inicia o LoginServer
-    java -Xmx32m -cp "./libs/*" net.sf.l2j.loginserver.LoginServer
+   nohup  java -Xmx32m -cp "./libs/*" net.sf.l2j.loginserver.LoginServer
     exit_code=$?
 
     if [ $exit_code -eq 2 ]; then

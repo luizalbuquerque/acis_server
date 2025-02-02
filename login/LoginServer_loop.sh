@@ -4,6 +4,16 @@ echo "=============================="
 echo "Iniciando aCis LoginServer Console"
 echo "=============================="
 
+
+echo "========================================="
+echo "Fechando processos antigos gameserver  .."
+sudo pkill -f net.sf.l2j.gameserver.GameServer
+echo "Fechando processos antigos loginserver .."
+sudo pkill -f net.sf.l2j.loginserver.LoginServer
+sleep 5
+echo "========================================="
+
+
 while true; do
     # Verifica a versão do Java
     java -version
